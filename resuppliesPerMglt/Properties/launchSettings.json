@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "ResuppliesPerMglt": {
+      "commandName": "Project",
+      "commandLineArgs": "-d 1000000"
+    }
+  }
+}
