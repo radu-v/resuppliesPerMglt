@@ -60,7 +60,7 @@ namespace ResuppliesPerMglt_Tests
                 var expected = val == DurationUnits.Unknown ? default : (duration, val);
                 var actual = durationParser.Parse($"{duration} {val}");
 
-                Assert.AreEqual(expected, actual);
+                Assert.AreEqual(expected, actual, $"Failed for duration: {duration}");
             }
         }
 
@@ -73,7 +73,8 @@ namespace ResuppliesPerMglt_Tests
         [TestMethod]
         public void ConvertToHours_Should_ReturnNull_OnUnknownUnit()
         {
-            Assert.IsNull(durationParser.ConvertToHours(new Random().Next(), DurationUnits.Unknown));
+            var unitValue = new Random().Next();
+            Assert.IsNull(durationParser.ConvertToHours(unitValue, DurationUnits.Unknown), $"Failed for value: {unitValue}");
         }
 
         [TestMethod]
@@ -83,7 +84,7 @@ namespace ResuppliesPerMglt_Tests
             var expected = unitValue / 3600M;
             var actual = durationParser.ConvertToHours(unitValue, DurationUnits.Second);
 
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual, $"Failed for unitValue: {unitValue}");
         }
 
         [TestMethod]
@@ -93,7 +94,7 @@ namespace ResuppliesPerMglt_Tests
             var expected = unitValue / 60M;
             var actual = durationParser.ConvertToHours(unitValue, DurationUnits.Minute);
 
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual, $"Failed for unitValue: {unitValue}");
         }
 
         [TestMethod]
@@ -112,7 +113,7 @@ namespace ResuppliesPerMglt_Tests
             var expected = unitValue * 24M;
             var actual = durationParser.ConvertToHours(unitValue, DurationUnits.Day);
 
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual, $"Failed for unitValue: {unitValue}");
         }
 
         [TestMethod]
@@ -122,7 +123,7 @@ namespace ResuppliesPerMglt_Tests
             var expected = unitValue * 24 * 7;
             var actual = durationParser.ConvertToHours(unitValue, DurationUnits.Week);
 
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual, $"Failed for unitValue: {unitValue}");
         }
 
         [TestMethod]
@@ -132,7 +133,7 @@ namespace ResuppliesPerMglt_Tests
             var expected = unitValue * 24 * AverageDaysInMonth;
             var actual = durationParser.ConvertToHours(unitValue, DurationUnits.Month);
 
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual, $"Failed for unitValue: {unitValue}");
         }
 
         [TestMethod]
@@ -142,7 +143,7 @@ namespace ResuppliesPerMglt_Tests
             var expected = unitValue * 24 * AverageDaysInYear;
             var actual = durationParser.ConvertToHours(unitValue, DurationUnits.Year);
 
-            Assert.AreEqual(expected, actual);
+            Assert.AreEqual(expected, actual, $"Failed for unitValue: {unitValue}");
         }
     }
 }

@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28124.53
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResuppliesPerMglt", "resuppliesPerMglt\ResuppliesPerMglt.csproj", "{8DCD03B7-5282-4F4B-B4F5-7C0CDB900E4A}"
+	ProjectSection(SolutionItems) = preProject
+		ResuppliesPerMglt.ruleset = ResuppliesPerMglt.ruleset
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ResuppliesPerMglt_Tests", "resuppliesPerMglt_Tests\ResuppliesPerMglt_Tests.csproj", "{01017EDC-2A9C-40A2-960F-F52BE399FC01}"
 EndProject
