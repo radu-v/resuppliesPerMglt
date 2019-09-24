@@ -55,7 +55,7 @@ The following command will produce an .exe file under Windows:
 dotnet build resuppliesPerMglt.sln -c "Release" -r "win81-x64"
 ```
 
-The following command will produce an .exe file under Linux:
+The following command will produce an executable file under Linux:
 ```
 dotnet build resuppliesPerMglt.sln  -c "Release" -r "ubuntu.18.04-x64"
 ```
