@@ -1,6 +1,6 @@
 # ResuppliesPerMglt
 
-ResuppliesPerMglt is a tool that calculates the number of re-supply stops a Star Wars starship would need to travel a specific distance.
+ResuppliesPerMglt is a tool that calculates the number of re-supply stops a Star Wars starship would need in order to travel a specific distance.
 
 The starship data is fetched from the public http://swapi.co API.
 
